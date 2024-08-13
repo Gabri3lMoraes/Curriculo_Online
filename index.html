@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="titulo">
+      <h1>CURRICULO ONLINE</h1>
+      <div class="icons">
+      <ion-icon class="Sun" name="sunny-outline"></ion-icon>
+      <ion-icon class="Moon" name="moon-outline"></ion-icon>
+      </div>
+     
+      
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+
+      <h1 class="dados">Dados Pessoais</h1>
+
+      <form id="Dados">
+        <input class="input-dados" id="name" type="text" placeholder="Nome Completo" />
+
+        <div id="sub">
+          <input class="input-dados" id="CEP" type="number" placeholder="CEP" />
+          <button type="button" id="submitt">
+            <ion-icon id="sourch" name="search-outline"></ion-icon>
+          </button>
+          <p class="message"></p>
+        </div>
+
+        <input  class ="input-dados" type="date" placeholder="Data de Nascimento" />
+
+        <input class ="input-dados" id="city" type="text" placeholder="Endereço" />
+
+        <input class="input-dados" type="text" placeholder="Telefone" oninput="formatPhone(this)"/>
+
+        <input class ="input-dados" id="Bairro" type="text" placeholder="Bairro" />
+
+        <input class ="input-dados" id="UF" type="text" placeholder="UF" />
+
+        <input class ="input-dados" id="local" type="text" placeholder="localidade" />
+      </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <form action="" class="form-objetivo">
+        <h1>Objetivo</h1>
+        <textarea
+          name=""
+          id="objetivo"
+          placeholder="Escreva Seu objetivo na Empresa"
+        ></textarea>
+        <button type="button" class="random">Não sei oque escrever!</button>
+      </form>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <form action="" class="form-experiencia">
+        <h1>Experiencias Profissionais</h1>
+        <div class="formexp">
+          <ul class="tasklist">
+            <li class="taskbox template hide">
+              <h1 class="empresa"></h1>
+              <p class="func"></p> 
+              <p class="data-start"></p>
+              <p class="data-end"></p>
+              <button  type="button" class="remover"><ion-icon class="lixo" name="trash-outline"></ion-icon></button>
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="abirtela()" class="button-add">
+          <ion-icon name="add-circle-outline"></ion-icon> Adicionar
+        </button>
+      </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <form action="" class="form-habilidades">
+        <h1>Habilidades</h1>
+        <div class="formhab">
+          <ul class="taskboxx">
+            <li class="optrabalhos template falso">
+              <p class="trabalhoparagrafo"></p>
+          </ul>
+          </li>
+        </div>
+        <button onclick="abrirhab()" type="button" class="button-add">
+          <ion-icon name="add-circle-outline"></ion-icon> Adicionar
+        </button>
+      </form>
+
+      <form class="form-cursos" action="">
+        <h1>Cursos</h1>
+        <div class="formcurso">
+          <ul class="taskcurso">
+            <li class="opcurso hide">
+              <h2 class="nomedocurso"></h2>
+              <h3 class="nomedafacul"></h3>
+              <p class="periodofacul"></p>
+              <p class="data-startcurso"></p>
+              <p class="data-endcurso"></p>
+              <p class="checkan"></p>
+              <button  type="button" class="removercurso"><ion-icon class="lixo" name="trash-outline"></ion-icon></button>
+            </li>
+          </ul>
+        </div>
+        <button onclick="abrirCursos()" type="button" class="button-add">
+          <ion-icon name="add-circle-outline"></ion-icon> Adicionar
+        </button>
+      </form>
+
+      <form class="form-Escolaridade" action="">
+        <h1>Formação</h1>
+        <div class="formescola">
+          <ul class="taskescola">
+            <li class="opescola hide">
+              <h1 class="nomedainstis"></h1>
+              <h2 class="nomedaescola"></h2>
+              <p class="anodaentrada"></p>
+              <p class="anodetermino"></p>
+              
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="abrirescola()" id="button-escola" class="button-add">
+          <ion-icon name="add-circle-outline"></ion-icon> Adicionar
+        </button>
+      </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="containerr">
+        <div class="grid1exp">
+          <label for="">Nome da Empresa</label>
+          <input id="Empre" name="Empresa" class="form-inst" type="text" />
+        </div>
+        <div class="grid2exp">
+          <label for="">Função</label>
+          <input id="funcao" class="form-inst" name="Funcao" type="text" />
+        </div>
+        <div class="grid3exp">
+          <label for="">Data de Entrada</label>
+          <input id="data" class="form-inst" type="date" />
+        </div>
+        <div class="grid4exp">
+          <label for="">Data de Saida</label>
+          <input id="dataend" class="form-inst" type="date" />
+        </div>
+        <div class="buttonexp">
+          <button onclick="salvar()" class="save">Salvar</button>
+          <button onclick="fechar()" class="close">Cancelar</button>
+        </div>
+      </div> 
+
+
+
+
+      <div class="Cursos">
+        <div class="grid1">
+          <label for="">Nome do Curso</label>
+          <input id="name-curso" name="Empresa" class="form-inst" type="text" />
+        </div>
+        <div class="grid2">
+          <label for="">Instituição de Ensino</label>
+          <input id="name-inst" class="form-inst" name="Funcao" type="text" />
+        </div>
+        <div class="grid3">
+          <p>Periodo</p>
+          <select name="Periodo" id="periodo">
+            <option value="1°">1°</option>
+            <option value="2°">2°</option>
+            <option value="3°">3°</option>
+            <option value="4°">4°</option>
+            <option value="5°">5°</option>
+            <option value="6°">6°</option>
+            <option value="7°">7°</option>
+            <option value="8°">8°</option>
+            <option value="9°">9°</option>
+            <option value="10°">10°</option>
+            <option value="11°">11°</option>
+            <option value="12°">12°</option>
+          </select>
+        </div>
+    
+        <div class="grid4">
+          <label for="">Data de Entrada</label>
+          <input id="data-curso" class="form-inst" name="Funcao" type="date" />
+        </div>
+        
+        <div class="grid5">
+          <label for="">Data de Saida</label>
+          <input id="data-curs" class="form-inst" name="Funcao" type="date" />
+          
+        </div>
+
+        <div class="wait">
+          <input value="concluido" name = "optioncheck" type="checkbox">
+          <label for="concluido">concluido</label>
+          <input value="em andamento" name="optioncheck" type="checkbox">
+          <label for="esperando">em andamento</label>
+        </div>
+        <div class="button">
+          <button onclick="salvarcurso()" class="save">Salvar</button>
+          <button onclick="fecharcurso()" class="close">Cancelar</button>
+        </div>
+      </div>
+
+
+      
+  <form action="" class="job">
+    <h3 class="titulo-job">qual o seu objetivo de atuação</h3>
+      <select name="Area" id="test">
+        <option value="advogado">Advogado</option>
+  <option value="aeromoca">Aeromoça</option>
+  <option value="agronomo">Agrônomo</option>
+  <option value="alpinista-industrial">Alpinista Industrial</option>
+  <option value="antropologo">Antropólogo</option>
+  <option value="arqueologo">Arqueólogo</option>
+  <option value="arquiteto">Arquiteto</option>
+  <option value="artesao">Artesão</option>
+  <option value="assistente-administrativo">Assistente Administrativo</option>
+  <option value="astronomo">Astrônomo</option>
+  <option value="bailarino">Bailarino</option>
+  <option value="biologo">Biólogo</option>
+  <option value="bioquimico">Bioquímico</option>
+  <option value="bombeiro">Bombeiro</option>
+  <option value="bibliotecario">Bibliotecário</option>
+  <option value="biotecnologo">Biotecnólogo</option>
+  <option value="cantor">Cantor</option>
+  <option value="carpinteiro">Carpinteiro</option>
+  <option value="cartografo">Cartógrafo</option>
+  <option value="chefe-de-cozinha">Chefe de Cozinha</option>
+  <option value="cirurgiao">Cirurgião</option>
+  <option value="cientista-da-computacao">Cientista da Computação</option>
+  <option value="contador">Contador</option>
+  <option value="corretor-de-imoveis">Corretor de Imóveis</option>
+  <option value="corretor-de-seguros">Corretor de Seguros</option>
+  <option value="costureira">Costureira</option>
+  <option value="dentista">Dentista</option>
+  <option value="desenhista">Desenhista</option>
+  <option value="designer-de-interiores">Designer de Interiores</option>
+  <option value="designer-grafico">Designer Gráfico</option>
+  <option value="desenvolvedor-de-software">Desenvolvedor de Software</option>
+  <option value="detetive-particular">Detetive Particular</option>
+  <option value="diagramador">Diagramador</option>
+  <option value="digitador">Digitador</option>
+  <option value="dj">DJ</option>
+  <option value="doutor">Doutor</option>
+  <option value="economista">Economista</option>
+  <option value="editor-de-video">Editor de Vídeo</option>
+  <option value="educador-fisico">Educador Físico</option>
+  <option value="eletricista">Eletricista</option>
+  <option value="enfermeiro">Enfermeiro</option>
+  <option value="engenheiro-agronomo">Engenheiro Agrônomo</option>
+  <option value="engenheiro-ambiental">Engenheiro Ambiental</option>
+  <option value="engenheiro-civil">Engenheiro Civil</option>
+  <option value="engenheiro-de-alimentos">Engenheiro de Alimentos</option>
+  <option value="engenheiro-de-producao">Engenheiro de Produção</option>
+  <option value="fisico">Físico</option>
+  <option value="fisioterapeuta">Fisioterapeuta</option>
+  <option value="fotografo">Fotógrafo</option>
+  <option value="frentista">Frentista</option>
+  <option value="fundidor">Fundidor</option>
+  <option value="fonoaudiologo">Fonoaudiólogo</option>
+  <option value="garcom">Garçom</option>
+  <option value="geografo">Geógrafo</option>
+  <option value="geologo">Geólogo</option>
+  <option value="gestor-de-projetos">Gestor de Projetos</option>
+  <option value="gerente-de-marketing">Gerente de Marketing</option>
+  <option value="gerente-de-vendas">Gerente de Vendas</option>
+  <option value="grafiteiro">Grafiteiro</option>
+  <option value="historiador">Historiador</option>
+  <option value="humorista">Humorista</option>
+  <option value="horticultor">Horticultor</option>
+  <option value="ilustrador">Ilustrador</option>
+  <option value="importador">Importador</option>
+  <option value="instrutor-de-autoescola">Instrutor de Autoescola</option>
+  <option value="instrutor-de-informatica">Instrutor de Informática</option>
+  <option value="interprete">Intérprete</option>
+  <option value="investigador">Investigador</option>
+      </select>
+      <div class="buta">
+        <button type="button" onclick="Salvaobjeto()" class="salvar">Salvar</button>
+        <button type="button" class="fechar">Fechar</button>
+      </div>
+
+    </form>
+    <div class="imprimir">
+      <button class="impressao">Imprimir</button>
+    </div>
+  
+  
+  </div>
+
+  <div class="escola">
+    <div class="grid1escola">
+      <label for="">Nome da Instituição</label>
+      <input id="nameinstescola" class="form-escola" type="text">
+    </div>
+    <div class="grid2escola">
+      <label for="">Nivel de Escolaridade</label>
+      <select name="escola" id="option-escola">
+        <option name = "optiones" value="Ensino Fundamental Completo">Ensino Fundamental Completo</option>
+        <option name = "optiones" value="Selecione">Selecione</option>
+        <option name = "optiones" value="Ensino Fundamental Incompleto">Ensino Fundamental Incompleto</option>
+        <option name = "optiones" value="Ensino Médio Completo">Ensino Médio Completo</option>
+        <option name = "optiones" value="Ensino Médio Incompleto">Ensino Médio Incompleto</option>
+        <option name = "optiones" value="Ensino Superior Completo">Ensino Superior Completo</option>
+        <option name = "optiones" value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+      </select>
+  
+    </div>
+    <div class="grid3escola">
+      <label for="">Data de Inicio</label>
+      <input id="dataescola" class="form-escola" type="date">
+    </div>
+    <div class="grid4escola">
+      <label for="">Data do Termino</label>
+      <input id="datafinalescola" class="form-escola" type="date">
+    </div>
+    <div class="butaescola">
+      <button type="button" onclick="Salvaescola()" class="salvar">Salvar</button>
+      <button type="button" onclick="fecharescola()" class="fechar">Fechar</button>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+      <div class="Habilidades">
+        <h1>Habilidades</h1>
+        <div class="grid1">
+          <ul class="hab">
+            <li class="trabalho falso">Comunicação Verbal e Escrita</li>
+            <li class="trabalho">Trabalho em Equipe</li>
+            <li class="trabalho">Liderança</li>
+            <li class="trabalho">Negociação</li>
+            <li class="trabalho">Empatia</li>
+            <li class="trabalho">Resolução de Conflitos</li>
+            <li class="trabalho">Habilidade de Apresentação</li>
+            <li class="trabalho">Gestão de Projetos</li>
+            <li class="trabalho">Gestão de Tempo</li>
+            <li class="trabalho">Planejamento Estratégico</li>
+            <li class="trabalho">Gestão de Recursos</li>
+            <li class="trabalho">Tomada de Decisão</li>
+            <li class="trabalho">Capacidade de Adaptação</li>
+            <li class="trabalho">Habilidade de Organização</li>
+            <li class="trabalho">Delegação de Tarefas</li>
+            <li class="trabalho">Mentoria e Coaching</li>
+            <li class="trabalho">Desenvolvimento de Equipe</li>
+            <li class="trabalho">Gestão de Mudanças</li>
+            <li class="trabalho">Networking</li>
+            <li class="trabalho">Negócios Internacionais</li>
+            <li class="trabalho">Atendimento ao Cliente</li>
+            <li class="trabalho">Vendas e Persuasão</li>
+            <li class="trabalho">Planejamento Financeiro</li>
+            <li class="trabalho">Controle de Qualidade</li>
+            <li class="trabalho">Análise de Dados</li>
+            <li class="trabalho">Pensamento Crítico</li>
+            <li class="trabalho">Criatividade</li>
+            <li class="trabalho">Solução de Problemas</li>
+            <li class="trabalho">Habilidade de Pesquisa</li>
+            <li class="trabalho">Competência Digital</li>
+          </ul>
+        <div class="button-hab">
+          <button  onclick="salvarhab()" class="save">Salvar</button>
+          <button type="button" onclick="fecharhab()" class="close">Cancelar</button>
+        </div>
+     </div> 
+  </div>
+
+  
+    <script src="java.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

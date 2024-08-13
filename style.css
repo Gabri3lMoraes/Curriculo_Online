@@ -1,0 +1,696 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: auto;
+    gap: 1rem;
+    
+}
+
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #151515;
+    padding: 10px 9%;
+    font-size: 22px;
+    color: #fff;
+    position: relative;
+}
+
+.moon{
+    background-color: #fff;
+    
+}
+
+.container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px 9%;
+    gap: 2rem;
+}
+
+.input-dados{
+    width: 40%;
+    border: 2px solid #474747;
+    padding: 5px;
+    outline: none;
+    font-size: 15px;
+    border-radius: 0px;
+    font-family: 'Poppins';
+    background-color: #fff;
+    color: #151515;
+}
+.form-inst{
+    width: 40%;
+    border: 2px solid #474747;
+    padding: 5px;
+    outline: none;
+    font-size: 15px;
+    border-radius: 0px;
+    font-family: 'Poppins';
+    background-color: #fff;
+    color: #151515;
+}
+
+
+#Dados{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+
+}
+
+.form-objetivo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5px;
+    align-items: flex-start;
+}
+
+#objetivo{
+    width: 500px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 10px;
+    resize: none;
+    border-radius: 15px;
+    border: 2px solid #474747;
+    margin-top: 2rem;
+    font-size: 16px;
+    font-family: 'Poppins';
+    
+}
+
+.icons{
+    position: absolute;
+    right:1rem;
+    display: flex;
+    gap: 2rem;
+    cursor: pointer;
+    
+}   
+
+
+
+a{
+    margin-top: 0.5rem;
+}
+
+.form-experiencia{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:1rem;
+}
+
+.button-add{
+    border: 3px solid transparent;
+    padding: 10px 3% ;
+    background-color: rgb(27, 24, 207);
+    text-align: start;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5 ease;
+    margin-bottom: 2rem;
+
+}
+
+.button-add:hover{
+    border: 3px solid #151515;
+    transition: 0.5s ease;
+}
+
+.containerr{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 240px;
+    background-color: #fff;
+    border: 2px solid  rgb(27, 24, 207);
+    position: absolute;
+    position: fixed;
+    flex-wrap: wrap;
+    align-items: center;
+   justify-content: flex-start;
+   align-items: start;
+    color: #151515;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    border-radius: 15px;
+    display: none;
+}
+.Cursos{
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    height: 260px;
+    background-color: #fff;
+    border: 2px solid  rgb(27, 24, 207);
+    position: absolute;
+    position: fixed;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    color: #151515;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    border-radius: 15px;
+    display: none;
+}
+
+.containerr label{
+    grid-column: span 1;
+}
+
+.containerr input{
+    grid-column: span 1;
+}
+
+
+
+.form-habilidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.form-cursos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.form-Escolaridade{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#sub{
+   
+    position: relative;
+    width: 314px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#sub p{
+    color: red;
+    font-size: 13px;
+}
+
+#submitt{
+    position: absolute;
+    top: 9px;
+    left: 110px;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: #151515;
+}
+
+#CEP{
+    width: 43%;
+    box-sizing: border-box;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.grid1{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.grid1 input{
+    width: 100%;
+}
+
+.grid2{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.grid2 input{
+    width: 100%;
+}
+.grid3{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.grid3 input{
+  width: 100%;
+}
+.grid4{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.grid4 input{
+   width: 100%;
+}
+.grid5{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    
+}
+.grid5 input{
+   width: 100%;
+}
+
+.button{
+    margin: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.save{
+    border: 2px solid rgb(27, 24, 207);
+    padding: 10px 9%;
+    border-radius: 15px;
+    color: #fff;
+    background-color: rgb(27, 24, 207);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+
+}
+
+.save:hover{
+    border: 2px solid #151515;
+    transition: 0.3s ease;
+}
+
+.close{
+    border: 2px solid rgb(27, 24, 207);
+    padding: 10px 9%;
+    border-radius: 15px;
+    color: #fff;
+    background-color: rgb(27, 24, 207);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.close:hover{
+    transition: 0.3s ease;
+    border: 2px solid #151515;
+}
+
+a{
+    text-decoration: none;
+    color: #151515;
+    font-weight: 700;
+}
+
+.random{
+    border: 0;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 4px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.job{
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    justify-content: start;
+    background-color: #d9d9d9;
+    color: #000000;
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+#test{
+    border: 0;
+    width: 50%;
+    background-color: #6d6969;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    outline: none;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.titulo-job{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.buta{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.salvar{
+    border: 0;
+    padding: 8px 10%;
+    border-radius: 15px;
+    background-color: rgb(27, 24, 207);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+.fechar{
+    border: 0;
+    padding: 8px 10%;
+    border-radius: 15px;
+    background-color: rgb(27, 24, 207);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.hide{
+    display: none;
+}
+
+.taskbox{
+    text-decoration: none;
+    list-style: none;
+}
+
+.empresa{
+    font-size: 24px;
+    color: #1882E3;
+}
+
+.func{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.data-start{
+    
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.data-end{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+
+.tasklist{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.remover{
+    margin-top: 1rem;
+    border: 2px solid #151515;
+    padding: 1px 13%;
+    border-radius: 14px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.removercurso{
+    margin-top: 1rem;
+    border: 2px solid #151515;
+    padding: 1px 13%;
+    border-radius: 14px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.remover:hover{
+    transition: 0.5s ease;
+    background-color: #1882E3;
+}
+
+
+.lixo{
+    font-size: 20px;
+}
+
+
+.Habilidades{
+    display: none;
+    width: 800px;
+    height: 550px;
+    background-color: #474747;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border-radius: 15px;
+    
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    position: fixed;
+
+}
+
+
+
+.hab{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px 0%; */
+    margin: 4px 2%;
+}
+
+.trabalho{
+    list-style: none;
+    border: 2px solid #fff;
+    text-align: center;
+    border-radius: 15px;
+    padding: 4px 3%;
+    cursor: pointer;
+    font-size: 17px;
+    color: #fff
+}
+
+.Habilidades h1{
+    font-size: 39px;
+    margin: 0.3rem;
+    color: #fff;
+}
+
+.button-hab{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.optrabalhos{
+    list-style: none;
+}
+
+.taskboxx{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 0.9rem;
+
+}
+
+.selecionado{
+    border: 2px solid green;
+}
+
+.selecionado:hover{
+    background-color: #000000;
+}
+
+.grid1exp{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.grid1exp input{
+    width: 100%;
+}
+
+.grid2exp{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.grid2exp input{
+    width: 100%;
+}
+.grid3exp{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.grid3exp input{
+  width: 100%;
+}
+.grid4exp{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.grid4exp input{
+   width: 100%;
+}
+
+.buttonexp{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.6rem;
+    margin-left: 2rem;
+}
+
+.opcurso{
+    list-style: none;
+}
+
+.taskcurso{
+    display: none;
+    gap: 2rem;
+}
+
+.nomedocurso{
+    color: #1882E3;
+}
+
+.wait{
+    position: absolute; top: 168px; left: 70px;
+}
+
+.escola{
+    display: none;
+    background-color: #fff;
+    border: 3px solid rgb(27, 24, 207);
+    width: 480px;
+    height: 230px;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    position: fixed;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 1rem;
+    gap: 2rem;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.grid1escola{
+    display: flex;
+    flex-direction: column;
+}
+.grid2escola{
+    display: flex;
+    flex-direction: column;
+}
+.grid3escola{
+    display: flex;
+    flex-direction: column;
+}
+.grid4escola{
+    display: flex;
+    flex-direction: column;
+}
+
+.butaescola{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.form-escola{
+    padding: 9px;
+    border: 2px solid black;
+    font-size: 17px;
+    color: #151515;
+}
+
+.escola label{
+    color: #151515;
+}
+
+.opescola{
+    list-style: none;
+}
+
+#option-escola{
+    padding: 9px;
+    border: 2px solid black;
+    font-size: 15px;
+    color: #151515;
+}
+
+.impressao{
+    background-color: #f0f0f0;
+    padding: 10px 5%;
+    border: 2px solid rgb(27, 24, 207);
+    background-color: #3618e3;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.imprimir{
+    display:flex;
+    justify-content: center;
+}
